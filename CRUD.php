@@ -11,12 +11,12 @@
         
         $datos = array();
         while($resultado = $query->fetch_assoc()) {
-        $datos[] = $resultado;
-      }
+            $datos[] = $resultado;
+        }
         
         echo json_encode($datos);
         exit;
-    }
+        }
 
     // CREATE: Insertar registro en la base de datos
     if($request == 2) {
@@ -32,10 +32,10 @@
             $sql_insert = "INSERT INTO usuarios(nombre, telefono) VALUES('$nombre', '$telefono')";
             if($mysqli->query($sql_insert) === TRUE) {
             echo "Se registro exitosamente.";
+            } else {
+                echo "Ocurrio un problema.";
+            }
         } else {
-            echo "Ocurrio un problema.";
-        }
-      } else {
             echo "Esos datos ya existen.";
         }
         exit;
@@ -65,6 +65,6 @@
 
         echo "Registro eliminado.";
         exit;
-    }
+        }
 
 ?>
