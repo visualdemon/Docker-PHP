@@ -3,13 +3,13 @@ language: php
 php:
   - 7.0
 
-# before_script:
-#   - composer install --dev
+ before_script:
+   - composer install --dev
 
-# script: vendor/bin/phpunit --configuration phpunit.xml
+ script: vendor/bin/phpunit --configuration phpunit.xml
 
-# notifications:
-#     email:
-#         - example.wilberamp@hotmail.com
+ notifications:
+     email:
+         - example.wilberamp@hotmail.com
 
     
